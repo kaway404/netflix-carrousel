@@ -1,163 +1,137 @@
 *{
+	padding: 0;
 	margin: 0px;
-	padding: 0px;
-	font-family: sans-serif;
 }
 
 body{
-	background: #141414;
+	background: #151515;
+	overflow: hidden;
 }
 
-.movie-train{
-	width: 100%;
-	position: relative;
-	left: 0;
-	height: 300px;
-	margin-top: 50px;
-}
-
-.scroll-wow{
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	white-space: nowrap;
-	overflow-y: hidden;
-}
-
-.movie{
-	width: 280px;
-    height: 159px;
-    padding: 0px;
-    cursor: pointer;
-    position: relative;
-    top: 50px;
-    left: 5px;
-    display: inline-block;
-    transition: 0.6s;
-    z-index: 100;
-}
-
-.movie:hover{
-	transform: scale(1.6);
-    margin-left: 71px;
-    margin-right: 120px;
-    left: 20px;
-    box-shadow: 1px 1px 1px #000;
-    left: 30px;
-}
-
-.movie img{
-	width: 100%;
-	height: 100%;
-}
-
-h1{
+.list h1{
 	color: #fff;
 	padding: 10px;
+	position: relative;
+	top: 20px;
 }
 
-.info{
+.list{
 	width: 100%;
-	height: 32vw;
+	height: 300px;
+}
+
+.scrolled{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+	left: 50px;
+}
+
+.scrolled .movie{
+	width: 250px;
+	height: 150px;
 	background: #000;
 	position: relative;
-	top: -88px;
-	display: none;
-	z-index: 0;
-}
-
-.view{
-	bottom: 0px;
-	position: absolute;
-	font-size: 22px;
-	text-align: center;
-	transition: 1s;
-	display: none;
+	top: 5px;
 	left: 10px;
-}
-
-.view:hover{
-	color: red;
-}
-
-.background{
-	width: 60%;
-	background: #151515;
-	background-image: url(/img/back.jpg);
-	background-size: cover;
-	height: 32vw;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.close{
-	float: right;
-	position: absolute;
-	height: 40px;
-	width: 40px;
-	right: 10px;
-	z-index: 100;
-	font-size: 1.3em;
-	border: none;
-	top: 10px;
+	display: inline-block;
 	cursor: pointer;
-	background: rgba(0,0,0,.50);
-	color: #fff;
+	background-size: cover;
+	transition: 1s;
+	top: 40px;
 }
 
-.close:hover{
+.scrolled .dead{
+	background-image: url("../img/dead.webp");
+}
+
+.scrolled .better{
+	background-image: url("../img/better.jpg");
+}
+
+.scrolled .mirror{
+	background-image: url("../img/mirror.jpg");
+}
+
+.scrolled .narcos{
+	background-image: url("../img/narcos.jpg");
+}
+
+.scrolled .papel{
+	background-image: url("../img/papel.jpg");
+}
+
+.scrolled .peaky{
+	background-image: url("../img/peaky.webp");
+}
+
+.scrolled .vikink{
+	background-image: url("../img/vikink.webp");
+}
+
+.hover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.90);
+	opacity: 0;
+	transition: 0.8s;
+}
+
+.hover h1{
+	color: #fff;
+	z-index: 1000;
+	position: relative;
+	bottom: 0px;
+	font-size: 18px;
+}
+
+.horizon-prev{
+	position: absolute;
+	width: 50px;
+	height: 150px;
+	background: rgba(0,0,0,.50);
+	top: 97px;
+	z-index: 1000;
+	float: right;
+	left: 0px;
+	cursor: pointer;
+}
+
+.horizon-prev:hover{
 	background: rgba(0,0,0,.80);
 }
 
-#roll-left{
-	position: absolute;
-	white-space: nowrap;
-	float: left;
-	left: 0;
-	top: 50px;
-	z-index: 2000;
-	height: 160px;
-	width: 50px;
-	background: rgba(0,0,0,.50);
-	cursor: pointer;
-	transition: 1s;
-	display: none;
-}
-
-#roll-left h1{
-	top: 40px;
+.horizon-prev p{
+	color: #fff;
+	font-size: 55px;
 	position: relative;
-	left: 0;
-	font-size: 45px;
+	top: 40px;
+	left: 5px;
 }
 
-#roll-right{
+.horizon-next{
 	position: absolute;
-	white-space: nowrap;
+	width: 50px;
+	height: 150px;
+	background: rgba(0,0,0,.50);
+	top: 97px;
+	z-index: 1000;
 	float: right;
-	right: 0;
-	top: 50px;
-	z-index: 2000;
-	height: 160px;
-	width: 50px;
-	background: rgba(0,0,0,.50);
+	right: 0px;
 	cursor: pointer;
-	transition: 1s;
-	display: none;
 }
 
-#roll-right h1{
-	top: 40px;
+.horizon-next:hover{
+	background: rgba(0,0,0,.80);
+}
+
+.horizon-next p{
+	color: #fff;
+	font-size: 55px;
 	position: relative;
-	left: 0;
-	font-size: 45px;
-}
-
-#roll-right:hover{
-	background-color: rgba(0,0,0,.80)
-}
-
-#roll-left:hover{
-	background-color: rgba(0,0,0,.80)
+	top: 40px;
+	left: 10px;
 }
